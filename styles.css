@@ -17,12 +17,12 @@ h1, h2, p {
   display: flex;
   flex-direction: column;
   gap: 20px;
-  border: 2px solid #ec0e0e;
+  border: 2px solid #28ec0e;
 }
 
 .texto-descriptivo-de-la-aplicacion {
   color: #6B7280;
-  border: 2px solid #ec0e0e;
+  border: 2px solid #0e67ec;
 }
 
 .tarjeta-del-formulario-de-creacion-de-tareas,
@@ -39,7 +39,7 @@ h1, h2, p {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 12px;
-  border: 2px solid #ec0e0e;
+  border: 2px solid #ece80e;
 }
 
 .contenedor-de-campos-del-formulario input,
@@ -56,7 +56,7 @@ h1, h2, p {
   color: #B45C3D;
   font-size: 14px;
   min-height: 20px;
-  border: 2px solid #ec0e0e;
+  border: 2px solid #c70eec;
 }
 
 .barra-superior-de-informacion-y-acciones {
@@ -65,12 +65,12 @@ h1, h2, p {
   align-items: center;
   gap: 12px;
   flex-wrap: wrap;
-  border: 2px solid #ec0e0e;
+  border: 2px solid #0eec3e;
 }
 
 #listaVisualDeTareas {
   margin-top: 15px;
   padding: 0;
   list-style: none;
-  border: 2px solid #ec0e0e;
+  border: 2px solid #000000;
 }
