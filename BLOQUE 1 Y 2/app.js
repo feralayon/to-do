@@ -1,9 +1,9 @@
-/* ------ESTADO GLOBAL DE LA APLICACION------ */
+/* ----   ESTADO GLOBAL DE LA APLICACION ------ */
 
 let listaDeTareas = [];
 let identificadorUnicoDeTarea = 0;
 
-/* ------REFERENCIAS A ELEMENTOS DEL HTML------ */
+/* ------REFERENCIAS A ELEMENTOS DEL HTML---- */
 
 const campoTextoTarea = document.getElementById("campoTextoTarea");
 const selectorCategoria = document.getElementById("selectorCategoria");
@@ -20,7 +20,7 @@ console.log("TASK MANAGER se inició correctamente");
 console.log("El DOM ya fue encadenado");
 console.log("Lista de tareas lista:", listaDeTareas);
 
-/* ------MOSTRAR U OCULTAR CAMPO DE OTRA CATEGORIA------ */
+/* -----MOSTRAR U OCULTAR CAMPO DE OTRA CATEGORIA------ */
 
 function mostrarUOcultarCampoOtraCategoria() {
   if (selectorCategoria.value === "other") {
@@ -31,7 +31,7 @@ function mostrarUOcultarCampoOtraCategoria() {
   }
 }
 
-/* ----------MENSAJES DE ERROR--------- */
+/* ------MANEJO DE ERROR EN PANTALLA------ */
 
 function mostrarMensajeDeError(textoDelError) {
   mensajeError.textContent = textoDelError;
@@ -41,7 +41,7 @@ function limpiarMensajeDeError() {
   mensajeError.textContent = "";
 }
 
-/* -------OBTENER DATOS DE LA CATEGORÍA SELECCIONADA------- */
+/* ------OBTENER DATOS DE CATEGORIA-------- */
 
 function obtenerDatosDeLaCategoriaSeleccionada() {
   if (selectorCategoria.value === "💼 Trabajo") {
@@ -76,56 +76,7 @@ function obtenerDatosDeLaCategoriaSeleccionada() {
   return { emojiDeCategoria: "📌", nombreDeCategoria: "General" };
 }
 
-/* --------ACTUALIZAR CONTADOR-------- */
-
-function actualizarContadorDeTareas() {
-  let cantidadDeTareasCompletadas = 0;
-
-  for (let posicion = 0; posicion < listaDeTareas.length; posicion++) {
-    if (listaDeTareas[posicion].estaCompletada) {
-      cantidadDeTareasCompletadas++;
-    }
-  }
-
-  numeroTareasCompletadas.textContent = cantidadDeTareasCompletadas;
-  numeroTotalTareas.textContent = listaDeTareas.length;
-}
-
-/* -------MOSTRAR TAREAS EN PANTALLA------- */
-
-function mostrarTareasEnPantalla() {
-  listaVisualDeTareas.textContent = "";
-
-  for (let posicion = 0; posicion < listaDeTareas.length; posicion++) {
-    const tareaActual = listaDeTareas[posicion];
-
-    const elementoLiDeLaTarea = document.createElement("li");
-    elementoLiDeLaTarea.classList.add("elemento-visual-individual-de-una-tarea");
-
-    const contenedorDelContenidoPrincipalDeLaTarea = document.createElement("div");
-    contenedorDelContenidoPrincipalDeLaTarea.classList.add("contenedor-del-contenido-principal-de-la-tarea");
-
-    const spanDelEmojiDeLaCategoria = document.createElement("span");
-    spanDelEmojiDeLaCategoria.classList.add("texto-visual-del-emoji-de-la-categoria");
-    spanDelEmojiDeLaCategoria.textContent = tareaActual.emojiDeCategoria;
-
-    const spanDelTextoDeLaTarea = document.createElement("span");
-    spanDelTextoDeLaTarea.classList.add("texto-descriptivo-de-la-tarea");
-    spanDelTextoDeLaTarea.textContent =
-      tareaActual.textoDeLaTarea + " (" + tareaActual.nombreDeCategoria + ")";
-
-    contenedorDelContenidoPrincipalDeLaTarea.appendChild(spanDelEmojiDeLaCategoria);
-    contenedorDelContenidoPrincipalDeLaTarea.appendChild(spanDelTextoDeLaTarea);
-
-    elementoLiDeLaTarea.appendChild(contenedorDelContenidoPrincipalDeLaTarea);
-
-    listaVisualDeTareas.appendChild(elementoLiDeLaTarea);
-  }
-
-  console.log("Se renderizaron las tareas en pantalla");
-}
-
-/* ------AGREGAR NUEVA TAREA------ */
+/* -------AGREGAR NUEVA TAREA AL ESTADO------- */
 
 function agregarNuevaTarea() {
   const textoDeLaNuevaTarea = campoTextoTarea.value.trim();
@@ -158,15 +109,12 @@ function agregarNuevaTarea() {
   selectorCategoria.value = "";
   campoOtraCategoria.value = "";
   campoOtraCategoria.style.display = "none";
-
-  mostrarTareasEnPantalla();
-  actualizarContadorDeTareas();
 }
 
-/* -------FUNCION TEMPORAL PARA EVITAR ERROR DEL onclick------ */
+/* ------FUNCIÓN TEMPORAL PARA EVITAR ERROR DEL onclick------ */
 
-function eliminarTodasLasTareasCompletadas() {
-  console.log("Todavía no se implementa limpiar completadas en el bloque 3");
+/* function eliminarTodasLasTareasCompletadas() {
+  console.log("Todavía no se implementa limpiar completadas en el bloque 2");
 }
 
 /* -----FUNCIONA GRGAR TAREA "LO PRINCIPAL" ------- */

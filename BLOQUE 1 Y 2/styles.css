@@ -2,8 +2,8 @@ body {
   margin: 0;
   padding: 20px;
   font-family: Arial, sans-serif;
-  background-color: #f4f7fb;
-  color: #333;
+  background-color: #f5f3ef;
+  color: #1F2937;
   border: 2px solid #ec0e0e;
 }
 
@@ -21,15 +21,15 @@ h1, h2, p {
 }
 
 .texto-descriptivo-de-la-aplicacion {
-  color: #666;
+  color: #6B7280;
   border: 2px solid #0e67ec;
 }
 
 .tarjeta-del-formulario-de-creacion-de-tareas,
 .tarjeta-de-la-lista-visual-de-tareas,
 .barra-superior-de-informacion-y-acciones {
-  background-color: #ffffff;
-  border: 2px solid #d9e2ec;
+  background-color: #ebe2d0;
+  border: 2px solid #D6D3D1;
   border-radius: 12px;
   padding: 20px;
 }
@@ -53,7 +53,7 @@ h1, h2, p {
 
 .contenedor-del-mensaje-de-error-del-formulario {
   margin-top: 10px;
-  color: #c62828;
+  color: #B45C3D;
   font-size: 14px;
   min-height: 20px;
   border: 2px solid #c70eec;
@@ -72,29 +72,5 @@ h1, h2, p {
   margin-top: 15px;
   padding: 0;
   list-style: none;
-  display: flex;
-  flex-direction: column;
-  gap: 14px;
   border: 2px solid #000000;
-}
-
-.elemento-visual-individual-de-una-tarea {
-  border: 2px solid #d9e2ec;
-  border-radius: 12px;
-  padding: 16px;
-  background-color: #ffffff;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  gap: 15px;
-  flex-wrap: wrap;
-}
-
-.contenedor-del-contenido-principal-de-la-tarea {
-  flex: 1;
-}
-
-.texto-visual-del-emoji-de-la-categoria {
-  font-size: 18px;
-  margin-right: 8px;
 }
