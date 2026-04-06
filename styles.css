@@ -68,6 +68,15 @@ h1, h2, p {
   border: 2px solid #0eec3e;
 }
 
+.boton-para-limpiar-tareas-completadas {
+  padding: 10px 14px;
+  border: 1px solid #cfd8dc;
+  border-radius: 8px;
+  background-color: #fff3f3;
+  color: #b71c1c;
+  cursor: pointer;
+}
+
 #listaVisualDeTareas {
   margin-top: 15px;
   padding: 0;
@@ -97,4 +106,39 @@ h1, h2, p {
 .texto-visual-del-emoji-de-la-categoria {
   font-size: 18px;
   margin-right: 8px;
+}
+
+.texto-descriptivo-de-la-tarea.texto-de-tarea-marcada-como-completada {
+  text-decoration: line-through;
+  opacity: 0.7;
+}
+
+.elemento-visual-individual-de-una-tarea.estado-visual-de-tarea-completada {
+  background-color: #e8f5e9;
+  border-color: #81c784;
+}
+
+.elemento-visual-individual-de-una-tarea.estado-visual-de-tarea-urgente {
+  background-color: #fff3e0;
+  border-color: #e53935;
+}
+
+.contenedor-de-botones-de-accion-de-cada-tarea {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  border-color: #35e561;
+}
+
+.contenedor-de-botones-de-accion-de-cada-tarea button {
+  padding: 8px 12px;
+  border: 1px solid #cfd8dc;
+  border-radius: 8px;
+  background-color: #f8fafc;
+  cursor: pointer;
+}
+
+.contenedor-de-botones-de-accion-de-cada-tarea button:hover {
+  background-color: #e3f2fd;
+  border-color: #4135e5;
 }
